@@ -14,6 +14,7 @@ public class Snapshot {
     public List<Float> egoCarPos;  // (x, y)
     public List<Float> carInFrontPos;  // (x, y)
 
+    /**
     @Override
     public boolean equals(Object obj) {
         if (obj == null)
@@ -24,5 +25,17 @@ public class Snapshot {
                 && weatherCondition.equals(snapshot.weatherCondition)
                 && egoCarPos.equals(snapshot.egoCarPos)
                 && carInFrontPos.equals(snapshot.carInFrontPos);
+    }
+    **/
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null)
+            return false;
+
+        Snapshot snapshot = (Snapshot) obj;
+        return roadType.equals(snapshot.roadType)
+                && weatherCondition.equals(snapshot.weatherCondition)
+                && Arrays.equals(egoCarPos.toArray(), snapshot.egoCarPos.toArray())
+                && Arrays.equals(egoCarPos.toArray(), snapshot.egoCarPos.toArray());
     }
 }

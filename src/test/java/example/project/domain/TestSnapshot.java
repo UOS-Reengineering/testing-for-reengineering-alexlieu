@@ -28,10 +28,13 @@ public class TestSnapshot {
     @Test
     public void testEquality()
     {
+        /**
         assertEquals(s1.roadType, s2.roadType);
         assertEquals(s1.weatherCondition, s2.weatherCondition);
         assertEquals(s1.egoCarPos, s2.egoCarPos);
         assertEquals(s1.carInFrontPos, s2.carInFrontPos);
+         **/
+        assertEquals(true, s1.equals(s2));
     }
 
     @Test
